@@ -103,9 +103,6 @@ header .lang button {
     cursor: pointer;
 }
 
-header .lang button {
-}
-
 header .lang i {
     position: absolute;
     top:50%;
@@ -128,6 +125,10 @@ header .lang ul {
     display: none;
 }
 
+header .lang ul.on {
+    display: block;
+}
+
 header .lang li {
     height: 25px;
     display: flex;
@@ -135,10 +136,6 @@ header .lang li {
     justify-content: center;
     cursor: pointer;
     border-bottom: 1px solid #161411;
-}
-
-.lang button:focus + ul {
-    display: block;
 }
 
 

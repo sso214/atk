@@ -54,11 +54,22 @@ $(document).ready(function(){
         })
     });
 
-    //lang
+    //23.11.02
+    $(".lang button").on('click', function(){
+        $(".lang-list").toggleClass('on');
+    });
+    $('html').click(function(e) {
+        if($(e.target).parents('.lang-button').length < 1 && !$(e.target).hasClass('lang-button')){
+            $(".lang-list").removeClass('on');
+        }
+    });
     $(".lang-list li").on('click', function(){
-        console.log('hi');
-        console.log($(this).data('key'));
-    })
+        var name = $(this).text();
+        var value = $(this).data('key');
+
+        $(".lang button span").text(name);
+        console.log(value);
+    });
 
 
     //23.11.02
