@@ -1,0 +1,179 @@
+body {
+    background: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: 100%;
+    min-width: 1210px;
+    height: 100px;
+    padding: 0 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header .left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header .right {
+    color: #81734e;
+    display: flex;
+    gap: 40px;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header .nav li {
+    position: relative;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+header .nav li:after {
+    content: '';
+    position: absolute;
+    top:50%;
+    right:-40px;
+    transform: translateY(-50%);
+
+    display: block;
+
+    width:1px;
+    height:18px;
+    background: #81734e;
+    cursor: default;
+}
+
+header .nav li:last-child:after {
+    display: none;
+}
+
+header .nav a {
+    position: relative;
+}
+
+header .nav a:after {
+    transition: all .2s;
+}
+
+header .nav .on a:after {
+    content: '';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    width: 100px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient( ellipse, #ecb100, transparent 70% );
+    opacity: 0.5;
+}
+
+header .lang {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+header .lang button {
+    position: relative;
+    width: 200px;
+    height: 25px;
+
+    font-size: 14px;
+    border: 1px solid #81734e;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+header .lang button {
+}
+
+header .lang i {
+    position: absolute;
+    top:50%;
+    right: 7px;
+    transform: translateY(-50%);
+    color: #b39b5f;
+}
+
+header .lang ul {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,.3);
+
+    display: none;
+}
+
+header .lang li {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom: 1px solid #161411;
+}
+
+.lang button:focus + ul {
+    display: block;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 99;
+    top:50%;
+    transform: translateY(-50%);
+    left:60px;
+}
+
+nav li {
+    position: absolute;
+    right:0;
+
+    width: 77%;
+    height: 13%;
+    cursor: pointer;
+}
+
+nav li:nth-child(1) {top:7.6%}
+nav li:nth-child(2) {top:44.1%}
+nav li:nth-child(3) {top:80.4%}
+
+nav li.on:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left:3%;
+    transform: translateY(-50%);
+
+    width: 11px;
+    height: 12px;
+    background: url("../img/common/nav-active.png") no-repeat center;
+    background-size: contain;
+}
