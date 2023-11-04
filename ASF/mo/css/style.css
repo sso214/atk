@@ -1,0 +1,114 @@
+@keyframes mouse {
+    from {
+        top: calc(100% + 17px)
+    }
+    to {
+        top: calc(102% + 17px)
+    }
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#cont01 {
+    background: url("../img/cont01/background.jpg") no-repeat top center;
+    background-size: 100% auto;
+}
+
+#cont01 .content {
+    position: absolute;
+    bottom: 12%;
+    width: 100%;
+    text-align: center;
+}
+
+#cont01 .title {
+    width: 100%;
+}
+
+#cont01 .pv-button {
+    position: absolute;
+    top: 64%;
+    left: 23.5%;
+    width: 52%;
+    height: 14%;
+    cursor: pointer;
+}
+
+#cont01 .mouse {
+    position: absolute;
+    height: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    animation: 0.5s linear 1s infinite alternate mouse
+}
+
+.game {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+#cont02.game {background-image: url("../img/cont02/background.jpg")}
+#cont03.game {background-image: url("../img/cont03/background.jpg")}
+#cont04.game {background-image: url("../img/cont04/background.jpg")}
+
+.game .top {
+    position: absolute;
+    top: calc(50px + 2%);
+    width: 100%;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game .logo {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.game .logo img:nth-child(1) {height:25px}
+.game .logo img:nth-child(2) {height:30px}
+
+.game .homepage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.game .homepage img {
+    height: 11px;
+}
+
+.game .content {
+    position: absolute;
+    bottom: 2.6%;
+    text-align: center;
+}
+
+.game .content img {
+    width: 100%;
+}
+
+.game .button {
+    position: relative;
+}
+
+.game .button a {
+    position: absolute;
+    top:11%;
+    left:33%;
+    width:33%;
+    height:32%;
+}
+
+#cont03.game .button a {
+    width: 36%;
+    left: 12%;
+}
