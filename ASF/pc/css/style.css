@@ -260,14 +260,23 @@ section {
     color: #f4d88e;
 }
 
+#cont03 .swiper-slide {
+    position: relative;
+    max-width: 91.78vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cont03 .swiper-slide > div {
+    position: relative;
+    width: max-content;
+}
+
 #cont03 .swiper-slide img {
     max-width: 100%;
     max-height: 69.90vh;
-    position: relative;
-}
-
-#cont03 .swiper-slide {
-    max-width: 91.78vw;
     position: relative;
 }
 
