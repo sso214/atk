@@ -23,11 +23,14 @@ section {
     width: 80vw;
 }
 
-#cont01 {
-    z-index: 1;
-    background: url("../img/cont01/background.jpg") no-repeat center;
-    background-size: cover
-}
+/*23.11.08*/
+.video-background {position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1}
+.video-foreground,
+.video-background iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
+@media (min-aspect-ratio: 16/9) {.video-foreground {height:300vh;top:50%;transform:translateY(-50%)}}
+@media (max-aspect-ratio: 16/9) {.video-foreground {width:300vw;left:50%;transform:translateX(-50%)}}
+#cont01 {z-index:1}
+/*23.11.08*/
 
 #cont01 .bg {
     position: absolute;

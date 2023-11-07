@@ -5,6 +5,38 @@ var app = new onePageScroll({
     throttling: 300,
 });
 
+// 23.11.08
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '450',
+        width: '800',
+        videoId: 'zD15in3bfeA',
+        playerVars: {
+            'mute': 1,
+            'loop': 1,
+            'playlist': 'zD15in3bfeA',
+            'autoplay': 1,
+            'showsearch': 0,
+            'cc_load_policy': 0,
+            'controls': 0,
+            'autohide': 1,
+            'disablekb': 0,
+            'rel': 0,
+        }, events: {
+            'onReady': function() {
+                player.mute();
+                player.playVideo();
+            },
+        }
+    });
+}
+// 23.11.08
+
 $(document).ready(function(){
     $(".menu-button").on('click', function(){
         $("nav").addClass('on');
