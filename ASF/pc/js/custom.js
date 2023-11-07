@@ -105,11 +105,17 @@ $(document).ready(function(){
 
 
     //23.11.02
+    var autoPlayParams = '?autoplay=1';
     function stopVideo() {
         var visualVideoTarget = $(".visualVideo");
-        var visualVideoSrc = visualVideoTarget.attr('src');
+        var visualVideoSrc = visualVideoTarget.attr('src').replace(autoPlayParams, '');
         visualVideoTarget.attr("src","");
         visualVideoTarget.attr("src",visualVideoSrc);
+    }
+    function autoPlayVideo() {
+        var visualVideoTarget = $(".visualVideo");
+        var visualVideoSrc = visualVideoTarget.attr('src');
+        visualVideoTarget.attr("src",`${visualVideoSrc}${autoPlayParams}`);
     }
 
     //23.11.02
@@ -123,6 +129,8 @@ $(document).ready(function(){
             var dataKey = $(this).data('key');
             $(".pop." + dataKey).addClass('on');
             popBlack.addClass('on');
+
+            if (dataKey === 'video') autoPlayVideo();
         });
 
         popClose.on('click', function() {
