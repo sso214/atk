@@ -1,6 +1,6 @@
 body {
     background: url("../img/common/bg.jpg") no-repeat center #000;
-    background-size: contain;
+    background-size: cover;
 }
 
 header {
