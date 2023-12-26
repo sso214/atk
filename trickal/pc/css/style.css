@@ -1,0 +1,355 @@
+section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden
+}
+
+/*#cont01 *,*/
+/*#cont02 *,*/
+/*#cont03 *,*/
+/*#cont04 *,*/
+/*#cont05 **/
+/*{*/
+/*    border: 1px solid red;*/
+/*}*/
+
+#cont01 {
+    background: url("../img/cont01-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#cont01 .logo {
+    position: absolute;
+    top: 3.7vh;
+    left: 2.8vw;
+    max-width: 13.59vw;
+    max-height: 14.44vh;
+}
+
+#cont01 .content {
+    position: absolute;
+    z-index: 1;
+    top: 11.57vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cont01 .content .title {
+    max-width: 58.22vw;
+    max-height: 39.07vh;
+}
+
+#cont01 .content .btn {
+    position: absolute;
+    bottom: 1%;
+    left: 35%;
+
+    display: block;
+    width: 15.5%;
+    height: 15%;
+}
+
+#cont01 .content .btn.appStore {
+    left: 51%;
+}
+
+#cont01 .chr {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 79.47vw;
+    max-height: 50.09vh;
+}
+
+#cont02 {
+    background: url("../img/cont02-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#cont02 .title {
+    position: absolute;
+    top: 10.46vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 61.35vw;
+    max-height: 17.31vh;
+}
+
+#cont02 .content {
+    position: absolute;
+    top: 27.77vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 77.76vw;
+    max-height: 64.81vh;
+}
+
+#cont03 {
+    background: url("../img/cont03-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#cont03 .cont-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cont03 .title {
+    max-width: 58.85vw;
+    max-height: 18.14vh;
+}
+
+#cont03 .content {
+    position: relative;
+}
+
+#cont03 .swiper-bg {
+    max-width: 58.85vw;
+    max-height: 58.79vh;
+}
+
+#cont03 .swiper {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#cont03 .swiper-slide {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cont03 .swiper-slide img {
+    object-fit: contain;
+    max-width:98%;
+    max-height:98%;
+}
+
+#cont03 .swiper-button-next,
+#cont03 .swiper-button-prev {
+    background-size: contain!important;
+    top: 50%;
+    width: 5.46vw;
+    height: 9.72vh;
+}
+#cont03 .swiper-button-next {
+    background: url("../img/slide-next.png") no-repeat center;
+    right: 0;
+    transform: translate(50%,-50%);
+}
+#cont03 .swiper-button-prev {
+    background: url("../img/slide-prev.png") no-repeat center;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+
+#cont04 {
+    background: url("../img/cont04-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#cont04 .gauge {
+    position: absolute;
+    top: 34.25vh;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#cont04 .bar {
+    width: 45vw;
+    height: 5.46vh;
+}
+
+#cont04 .bar-inner {
+    position: absolute;
+    top:10%;
+    left: 1%;
+    width: 98%;
+    height: 80%;
+}
+
+#cont04 .bar-inner:after {
+    content: '';
+    display: block;
+}
+
+#cont04 ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: url("../img/cont04-gauge-color.png") repeat left;
+    background-size: auto 100%;
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+}
+
+#cont04 ul:after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    right: 0;
+    transform: translate(60%,-50%);
+
+    width: 72px;
+    height: 102px;
+    display: block;
+
+    background: url("../img/cont04-gauge-hand.png") no-repeat center;
+    background-size: contain;
+}
+
+#cont04 .gauge li {
+    width: 59px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #5e0646;
+}
+
+#cont05 {
+    background: url("../img/cont05-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#cont05 .cont05-swiper {
+    position: relative;
+    width: 1200px;
+    height: calc(100% - 44px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#cont05 .cont05-swiper > .swiper-wrapper > .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cont05 .title {
+    height: 193px;
+}
+
+#cont05 .swiper-pagination {
+    position: relative;
+    margin: 20px 0;
+    top:0;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: 65px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #2b154d;
+    border-right: 0;
+}
+
+#cont05 .swiper-pagination span {
+    width: auto;
+    min-width: 105px;
+    height: 100%;
+    margin: 0;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:0;
+    border-right: 1px solid #2b154d;
+    opacity: 1;
+    background: transparent;
+    border-radius: 0;
+    color: #2a154d;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#cont05 .swiper-pagination span.swiper-pagination-bullet-active {
+    color: #fff;
+    background: linear-gradient(#b62c8d, #28154c);
+}
+
+#cont05 .swiper-slide .swiper {
+    width: 95%;
+}
+
+#cont05 .swiper-slide .swiper .swiper-slide {
+    position: relative;
+    width: 100%;
+}
+
+#cont05 .swiper-slide .swiper .swiper-slide img {
+    width: 100%;
+    opacity: 0;
+}
+
+#cont05 .swiper-slide .swiper .swiper-slide-active img {
+    opacity: 1;
+}
+
+#cont05 .swiper-slide .swiper-slide > div {
+    position: relative;
+}
+
+#cont05 .swiper-slide a {
+    position: absolute;
+    display: block;
+    width: 14.5%;
+    height: 8.5%;
+    bottom: 4.5%;
+    left:9.5%;
+}
+#cont05 .swiper-slide a:nth-child(2) {left:36.4%}
+#cont05 .swiper-slide a:nth-child(3) {left:59.6%}
+#cont05 .swiper-slide a:nth-child(4) {left:81.4%}
+
+
+#cont05 .swiper-button-next,
+#cont05 .swiper-button-prev {
+    z-index: 9;
+    background-size: contain!important;
+    top: 15%;
+    width: 100px;
+    height: 100px;
+}
+#cont05 .swiper-button-next {
+    background: url("../img/slide-next.png") no-repeat center;
+    right: 0;
+}
+#cont05 .swiper-button-prev {
+    background: url("../img/slide-prev.png") no-repeat center;
+    left: 0;
+}

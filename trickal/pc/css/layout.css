@@ -1,0 +1,70 @@
+#floating-banner {
+    position: fixed;
+    z-index: 999;
+    top: 17.22vh;
+    right: 2.5vw;
+}
+
+#floating-banner .close {
+    position: absolute;
+    top:0;
+    right:0;
+    width:31%;
+    padding-bottom: 23%;
+}
+
+#floating-banner img {
+    max-width: 11.45vw;
+    max-height: 21.11vh;
+}
+
+#nav {
+    position: fixed;
+    z-index: 999;
+    top: 41.85vh;
+    right: 2.5vw;
+}
+
+#nav img {
+    max-width: 11.45vw;
+    max-height: 38.79vh;
+}
+
+#nav ul {
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 14% 0;
+    width:100%;
+    height:100%;
+}
+
+#nav li {
+    cursor: pointer;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+#nav li.on {
+    opacity: 1;
+}
+
+#nav li img {
+    width: 95%;
+}
+
+footer {
+    width: 100%;
+    height: 44px;
+    background: #4a246a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    height: 100%;
+}
