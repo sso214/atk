@@ -139,10 +139,10 @@ section {
 }
 
 #cont04 .gauge {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -510%);
 
     width: 85vw;
     height: 3.38vh;
