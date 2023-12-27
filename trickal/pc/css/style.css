@@ -5,15 +5,6 @@ section {
     overflow: hidden
 }
 
-/*#cont01 *,*/
-/*#cont02 *,*/
-/*#cont03 *,*/
-/*#cont04 *,*/
-/*#cont05 **/
-/*{*/
-/*    border: 1px solid red;*/
-/*}*/
-
 #cont01 {
     background: url("../img/cont01-bg.jpg") no-repeat center;
     background-size: cover;
@@ -167,63 +158,36 @@ section {
 #cont04 .gauge {
     position: absolute;
     top: 34.25vh;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
+
+    width: 45vw;
+    height: 5.46vh;
+    padding: 3px;
+
+    background: #120733;
+    border: 2px solid #ec6ec3;
+    border-radius: 25px;
 }
 
 #cont04 .bar {
-    width: 45vw;
-    height: 5.46vh;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
 }
 
-#cont04 .bar-inner {
-    position: absolute;
-    top:10%;
-    left: 1%;
-    width: 98%;
-    height: 80%;
-}
-
-#cont04 .bar-inner:after {
-    content: '';
-    display: block;
-}
-
-#cont04 ul {
-    position: absolute;
-    top: 0;
-    left: 0;
+#cont04 .gauge ul {
+    position: relative;
+    z-index: 1;
+    width: 100%;
     height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    background: url("../img/cont04-gauge-color.png") repeat left;
-    background-size: auto 100%;
-    border-top-left-radius: 19px;
-    border-bottom-left-radius: 19px;
-}
-
-#cont04 ul:after {
-    content: '';
-    position: absolute;
-    top: 65%;
-    right: 0;
-    transform: translate(60%,-50%);
-
-    width: 72px;
-    height: 102px;
-    display: block;
-
-    background: url("../img/cont04-gauge-hand.png") no-repeat center;
-    background-size: contain;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
 }
 
 #cont04 .gauge li {
-    width: 59px;
-    height: 100%;
-
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,6 +195,35 @@ section {
     font-size: 20px;
     font-weight: bold;
     color: #5e0646;
+
+    background: url("../img/cont04-gauge-color.png") repeat left;
+    background-size: auto 100%;
+}
+
+#cont04 .gauge li:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#cont04 .gauge li:nth-child(11) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#cont04 .gauge li:last-child:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 70%;
+    right: 0;
+    transform: translate(60%,-50%);
+
+    width: 72px;
+    height: 102px;
+
+    background: url("../img/cont04-gauge-hand.png") no-repeat center;
+    background-size: contain;
 }
 
 #cont05 {
