@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import Lottie from 'react-lottie';
+import Gift from './lottie/gift.json';
 import 'aos/dist/aos.css';
 import 'swiper/css';
 import './index.css';
@@ -89,7 +91,6 @@ function App() {
             <img src='/image/cont04-mockup.png' alt='개인 맞춤 학습 추천' />
             <Swiper
               direction={'vertical'}
-              spaceBetween={30}
               slidesPerView={'auto'}
               loop={true}
               autoplay={{
@@ -100,13 +101,19 @@ function App() {
               className="cont04Swiper"
             >
               <SwiperSlide>
-                <img src='/image/cont04-screen.jpg' alt='screen' />
+                <img src='/image/cont04-screen1.png' alt='screen' />
               </SwiperSlide>
               <SwiperSlide>
-                <img src='/image/cont04-screen.jpg' alt='screen' />
+                <img src='/image/cont04-screen2.png' alt='screen' />
               </SwiperSlide>
               <SwiperSlide>
-                <img src='/image/cont04-screen.jpg' alt='screen' />
+                <img src='/image/cont04-screen3.png' alt='screen' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src='/image/cont04-screen4.png' alt='screen' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src='/image/cont04-screen5.png' alt='screen' />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -153,7 +160,11 @@ function App() {
                   커리어 관련 궁금증이 있다면?<br />
                   프클AI에게 무엇이든 물어보세요.
                 </p>
-                <img src='#' alt='커리어 관련 궁금증이 있다면 프클AI에게 무엇이든 물어보세요.' />
+                <div className='phone'>
+                  <div>
+                    <video src='/image/cont05-card01.mp4' autoPlay muted loop></video>
+                  </div>
+                </div>
               </li>
               <li>
                 <h5>STEP 2</h5>
@@ -161,7 +172,11 @@ function App() {
                   프클AI가 질문에 맞는 자세한 답변과<br />
                   학습 콘텐츠를 맞춤 추천해드려요.
                 </p>
-                <img src='#' alt='프클AI가 질문에 맞는 자세한 답변과 학습 콘텐츠를 맞춤 추천해드려요.' />
+                <div className='phone'>
+                  <div>
+                    <video src='/image/cont05-card02.mp4' autoPlay muted loop></video>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -186,14 +201,18 @@ function App() {
                   <b>OX 퀴즈, 단어 맞추기 등 학습 내용 기반</b><br />
                   AI 자동생성 퀴즈를 풀어보세요.
                 </h4>
-                <img src='#' alt='swiper' />
+                <div className='phone'>
+                  <div>
+                    <video src='/image/cont06-card01.mp4' autoPlay muted loop></video>
+                  </div>
+                </div>
               </li>
               <li>
                 <h4 data-aos="fade-up" data-aos-delay="300">
                   <b>학습 활동에 따라 보상(빈)을 얻고</b><br />
                   리그도 참여할 수 있어요.
                 </h4>
-                <img data-aos="fade-up" data-aos-delay="700" src='/image/cont06-card-sceen.png' alt='보상' />
+                <img data-aos="fade-up" data-aos-delay="700" src='/image/cont06-card02.png' alt='보상' />
               </li>
             </ul>
           </div>
@@ -308,7 +327,17 @@ function App() {
               <p>다양한 미션을 통해 얻는 보상 포인트 빈(Bean)</p>
             </div>
 
-            <img className='gift' src='#' alt='gift' />
+            <div className='gift'>
+              <Lottie
+                width={800}
+                height={800}
+                options={{
+                  loop: true,
+                  autoplay: true,
+                  animationData: Gift,
+                }}
+              />
+            </div>
 
             <ul className='cardList'>
               <li>
